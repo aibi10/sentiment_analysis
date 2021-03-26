@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<style>
+	h1 {text-align: center;}
+	p {text-align: center;}
+	div {text-align: center;}
+	h2 {text-align: center;}
+</style>
+</head>
+<body style="background:#ff7b25";">
+
+	<header style="width:800px; margin:0 auto;>
+		<div class="container">
+		<div >
+			<p style="font-family:Courier; color:Pink; font-size: 40px;"> Aibi's App</p>
+		</div>
+		<h2></h2>
+		<h2 style="margin-top: 100px;">Sentiment Checker</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Text Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="message" rows="10" cols="100"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict" style="width:100px; height:50px; font-size: 20px; background:pink;">
+		
+	</form>
+		
+	</div>
+	
+
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<style>
+	h1 {text-align: center;}
+	p {text-align: center;}
+	div {text-align: center;}
+	h2 {text-align: center;}
+</style>
+</head>
+<body style="background:#ff7b25";>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+		<p style="font-family:Courier; color:Pink; font-size: 40px;"> Aibi's App</p>
+		</div>
+		<h2></h2>
+		
+	</div>
+	</header>
+	<p style="color:lightblue;font-size:30px;text-align: center; margin-top: 100px;"><b>Results for Comment</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:blue; margin-top: 50px;">This is a positive review.</h2>
+	<h2 style="font-size:100px;">&#128522;</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:red; margin-top: 50px;">This is a negative review.</h2>
+	<h2 style="font-size:100px;">&#128528;</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
